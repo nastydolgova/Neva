@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.trip{
+    width: 341px;
+    height: 603px;
+    border-radius: 18px;
+    border: 0.3px solid #828282;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.trip__duration{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 12px;
+    padding-top: 15px;
+}
+
+.trip__duration span{
+    margin: auto 0;
+    color: #9E9E9E;
+    font-size: 12px;
+    font-weight: 400;
+    padding-left: 8px;
+}
+
+.trip__title{
+    font-weight: 600;
+    color: #404040;
+    margin: 0 12px;
+    padding-top: 15px;
+    line-height: 21px;
+}
+
+.trip__title span{
+    letter-spacing: 0.1px;
+}
+
+.trip__list{
+    margin: 0;
+    margin-top: 12px;
+    padding-left: 40px;
+}
+
+.trip__list li{
+    color: #4B4B4B;
+    padding: 8px 10px;
+    position: relative;
+    list-style: none;
+}
+
+.trip__list li::before{
+    position: absolute;
+    content:'';
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/check-mark.png);
+    background-size: contain;
+    left: -26px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.trip__times{
+    margin: 5px 0 7px 0px;
+    overflow: hidden;
+    height: 30px;
+}
+
+.trip__time-btn{
+    border: none;
+    border-radius: 11px;
+    width: 63px;
+    height: 24px;
+    background-color: #D9E8FF;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+.trip__info{
+    display: flex;
+    flex-direction: row;
+    margin: 10px 19px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trip__info-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 33%;
+}
+
+.trip__price{
+    font-size: 31px;
+    line-height: 26px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.trip__price-berth{
+    font-size: 10px;
+}
+
+.trip__detail{
+    width: 165px;
+    height: 44px;
+    color: #404040;
+    background-color: #FED74B;
+    border-radius: 20px;
+    border: 0.5px solid #CBA500;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.trip__img--desktop{
+    display: none;
+}
+
+.trip__time-more{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    background-color: transparent;
+    border: none;
+    color: #6BA6FF;
+    cursor: pointer;
+}
+
+.trip__price svg{
+    padding-left: 5px;
+    width: 15px;
+    height: 23px;
+}
+
+@media(min-width: 1090px){
+
+    .trip__price svg{
+        padding-left: 2px;
+        width: 19px;
+        height: 26px;
+    }
+
+    .trip__img--desktop{
+        display: block;
+    }
+
+    .trip__img--mobile{
+        display: none;
+    }
+
+    .trip{
+        width: 1070px;
+        height: 369px;
+        flex-direction: row;
+    }
+
+    .trip__wrp{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trip__title span:first-child{
+        display: none;
+    }
+
+    .trip__title{
+        font-size: 26px;
+        order: 1;
+        font-weight: 400;
+        color: #404040;
+        margin: 0 22px;
+        padding-top: 19px;
+        line-height: 32px;
+    }
+
+    .trip__title span{
+        letter-spacing: 0.2px;
+    }
+    
+    .trip__duration{
+        order: 2;
+        margin: 0 22px;
+    }
+
+    .trip__duration span{
+        font-size: 14px;
+    }
+
+    .trip__list{
+        order: 3;
+        margin-top: 0;
+        padding-left: 43px;
+        font-size: 18px;
+    }
+
+    .trip__list li{
+        padding: 7px 10px;
+    }
+
+    .trip__list li::before{
+        left: -22px;
+        top: 11px;
+    }
+
+    .trip__list li:first-child{
+        padding: 10px 10px 4px 10px;
+    }
+
+    .trip__list li:last-child{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .trip__list li span{
+        width: 56%;
+    }
+
+    .trip__time-btn{
+        width: 73px;
+        height: 28px;
+        font-size: 16px;
+        margin: 0 2px;
+    }
+
+    .trip__info{
+        order: 4;
+    }
+
+    .trip__times{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .trip__time-more{
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        background-color: transparent;
+        border: none;
+        color: #6BA6FF;
+        cursor: pointer;
+    }
+
+    .trip__price{
+        font-size: 38px;
+        line-height: 42px;
+    }
+
+    .trip__price-berth{
+        font-size: 14px;
+        padding-left: 2px;
+    }
+
+    .trip__info{
+        justify-content: flex-start;
+        margin: 0px 19px 10px 19px;
+    }
+
+    .trip__info-price{
+        width: 26%;
+    }
+
+    .trip__detail{
+        width: 185px;
+        height: 50px;
+        font-size: 18px;
+    }
+}
+
+.trip__time-btn:hover{
+    color: #fff;
+    background: #6BA6FF;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.trip__time-btn:nth-child(n+5){
+    margin-top: 5px;
+}
+
+.trip__detail:hover{
+    opacity: 0.8;
+}
+
+.hidden{
+    display: none;
+}
+
+.overflowAuto{
+    overflow: auto;
+    height: auto;
+}
